@@ -14,3 +14,8 @@ export interface ITrack {
     audio: string
     comments: IComment[]
 }
+
+export interface IFileUpload {
+    setFile: Function
+    file: any
+}

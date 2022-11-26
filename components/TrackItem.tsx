@@ -15,8 +15,8 @@ const TrackItem: FC<TrackItemProps> = ({ track, active = false }) => {
     const router = useRouter()
 
     return (
-        <Card className={styles.track}>
-            <IconButton style={{marginRight: "15px"}}>
+        <Card className={styles.track} onClick={() => router.push("/tracks/" + track._id)} >
+            <IconButton onClick={e => e.stopPropagation()} style={{marginRight: "15px"}}>
                 {active ? <Pause /> : <PlayArrow />}
             </IconButton>
 
@@ -43,7 +43,7 @@ const TrackItem: FC<TrackItemProps> = ({ track, active = false }) => {
                 </div>
             )}
 
-            <IconButton style={{marginLeft: "auto"}}>
+            <IconButton onClick={e => e.stopPropagation()} style={{marginLeft: "auto"}}>
                 <Delete />
             </IconButton>
         </Card>
