@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 // Наш хук
 export default function useDebounce(value: any, delay: number) {
   // Состояние и сеттер для отложенного значения
-  const [debouncedValue, setDebouncedValue] = useState(value);
+  const [debouncedValue, setDebouncedValue] = useState("");
 
   useEffect(
     () => {

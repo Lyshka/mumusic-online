@@ -28,7 +28,7 @@ const TrackPage = ({serverTrack}: any) => {
     }
 
     return (
-        <MainLayouts>
+        <MainLayouts title={"Lyshka Music " + track.name + " - " + track.artist} keywords={"МУзыка, артисты, " + track.name + ", " + track.artist}>
             <Button onClick={() => router.push("/tracks")} variant={"outlined"} style={{ fontSize: 32 }}>
                 К списку
             </Button>
